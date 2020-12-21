@@ -1,0 +1,176 @@
+html {
+    box-sizing: border-box;
+}
+
+* ,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font:14px/1.5 Arial;
+    color: #333;
+
+    /* grid */
+    display: grid;
+    grid: auto auto / 1fr 900px 1fr;
+
+}
+
+header {
+    /* row/column/rowEnd/columnEnd*/
+    grid-area: 1/1/2/4;
+
+    /* 内边距上下保持20px 左右为0*/
+    padding: 20px 0;
+    text-align: center;
+    background: #444;
+}
+
+header > .avatar {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+header > h1 {
+    margin: 10px;
+    font-size: 16px;
+    color: #aaa;
+}
+
+header > p {
+    margin: 0;
+    color: #999;
+}
+
+.column-1 {
+    grid-area: 1/1/2/2;
+}
+
+.column-2 {
+    grid-area:1/2/2/3 ;
+    margin-left: 30px;
+}
+
+main {
+    grid-area: 2/2/3/3;
+    display: grid;
+    grid: auto/300px 600px;
+}
+
+main section {
+    margin-top: 30px;
+    display: grid;
+    grid:auto auto / 50px auto;
+    align-items: center;
+}
+
+main section > span.iconfont {
+    display: grid;
+    grid-area: 1/1/2/2;
+    align-items: center;
+    justify-content: center;
+
+    background: #77a8a3;
+    border-radius: 50%;
+    color: #fff;
+    width: 32px;
+    height: 32px;
+
+
+}
+
+main section > h2 {
+    grid-area: 1/2/2/3;
+    
+    display: flex;
+    font-size: 18px;
+    align-items: center;
+}
+
+main section > h2::after {
+    flex:1;
+    margin-left: 20px;
+    content: " ";
+    height: 2px;
+    background: #77a8a3;
+    
+}
+
+main section > .detail {
+    grid-area: 2/2/3/3;
+    padding: 0;
+    margin: 0;
+}
+
+.basic-info .detail {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.basic-info .detail li {
+    display: flex;
+    align-items: center;
+}
+
+.basic-info .detail .iconfont {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.skills .detail {
+    margin: 0;
+    padding: 0;
+}
+
+.skills .detail > li {
+    margin-top: 10px;
+}
+
+.map .detail dd {
+    margin: 5px 0 10px 0;
+    height: 3px;
+    border-radius: 3px;
+    background: #ccc;
+}
+
+.map .detail .bar {
+    display: block;
+    height: 3px;
+    background: #77a8a3;
+}
+
+
+.layout-1 .detail > li {
+    display: grid;
+    grid: auto auto / auto 1fr auto;
+    align-items: center;
+    grid-gap:10px;
+    margin-top:20px;
+}
+
+.layout-1 .detail  .timeline {
+    grid-area: 1/1/2/2;
+}
+
+.layout-1 .detail h3 {
+    grid-area: 1/2/2/3;
+    margin: 0;
+}
+
+.layout-1 .detail .subtitle {
+    grid-area: 1/3/2/4;
+}
+
+.layout-1 .detail .content {
+    grid-area: 2/2/3/4;
+    margin: 0;
+    padding: 0;
+}
+
